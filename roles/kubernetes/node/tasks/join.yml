@@ -1,11 +1,11 @@
 ---
 
-- name: Reset Kubernetes component
-  shell: "kubeadm reset"
-  register: reset_cluster
+#- name: Reset Kubernetes component
+#  shell: "kubeadm reset"
+#  register: reset_cluster
 
 - name: Join to Kubernetes cluster
-  when: reset_cluster is succeeded
+#  when: reset_cluster is succeeded
   shell: |
     kubeadm join --token {{ token }} \
                 --discovery-token-unsafe-skip-ca-verification \
